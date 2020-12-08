@@ -2,14 +2,19 @@
 	<App id="app">
 		<pages>
 			<Page id="page" title="{i18n>title}">
-				<Panel headerText="{i18n>helloPanelTitle}" class="sapUiResponsiveMargin" width="auto">
-					<content>
+				<content>
+					<Panel headerText="{i18n>helloPanelTitle}" class="sapUiResponsiveMargin" width="auto">
 						<Button id="helloDialogButton" text="{i18n>openDialogButtonText}" press=".onOpenDialog" class="sapUiSmallMarginEnd"/>
 						<Button text="{i18n>showHelloButtonText}" press=".onShowHello" class="myCustomButton"/>
 						<Input value="{/recipient/name}" valueLiveUpdate="true" width="60%"/>
 						<FormattedText htmlText="Hello {/recipient/name}" class="sapUiSmallMargin sapThemeHighlight-asColor myCustomText"/>
-					</content>
-				</Panel>
+						<Panel headerText="{i18n>tablePanelTitle}" class="sapUiResponsiveMargin" width="auto">
+							<List headerText="Products" items="{ path: 'productsModel>/ProductCollection' }">
+								<StandardListItem title="{productsModel>Name}" description="{productsModel>Description}" counter="{productsModel>Quantity}"/>
+							</List>
+						</Panel>
+					</Panel>
+				</content>
 			</Page>
 		</pages>
 	</App>
