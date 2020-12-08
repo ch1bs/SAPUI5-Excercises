@@ -16,6 +16,11 @@ sap.ui.define([
 			var model = new JSONModel(data);
 			this.getView().setModel(model);
 		},
+		handleSelectChange: function (oEvent) {
+			var mode = oEvent.getParameter("selectedItem").getKey();
+			this.byId("ProductList").setMode(mode);
+		},
+
 		onShowHello: function () {
 			MessageToast.show('Hello World');
 		},
