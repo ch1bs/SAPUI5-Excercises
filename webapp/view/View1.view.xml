@@ -8,11 +8,11 @@
 						<Button text="{i18n>showHelloButtonText}" press=".onShowHello" class="myCustomButton"/>
 						<Input value="{/recipient/name}" valueLiveUpdate="true" width="60%"/>
 						<FormattedText htmlText="Hello {/recipient/name}" class="sapUiSmallMargin sapThemeHighlight-asColor myCustomText"/>
-						<Panel headerText="{i18n>tablePanelTitle}" class="sapUiResponsiveMargin" width="auto">
-							<List headerText="Products" items="{ path: 'productsModel>/ProductCollection' }">
-								<StandardListItem title="{productsModel>Name}" description="{productsModel>Description}" counter="{productsModel>Quantity}"/>
-							</List>
-						</Panel>
+					</Panel>
+					<Panel headerText="{i18n>tablePanelTitle}" class="sapUiResponsiveMargin" width="auto">
+						<List headerText="Products" items="{ path: 'productsModel>/ProductCollection' }">
+							<StandardListItem title="{productsModel>Name}" description="{productsModel>Description}" counter="{productsModel>Quantity}"/>
+						</List>
 					</Panel>
 				</content>
 			</Page>
